@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(to bottom, #00ff00 0%, #ff33cc 100%);
+}
+
+<h1>
+
+.hero {
+	background: linear-gradient(to bottom, #00ff00 0%, #ff33cc 100%);
+	position: relative;
+  align-self: center;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	&__content {
+		position: relative;
+		align-self: center;
+		padding: 3rem 0;
+	}
+}
+
+.snow {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.snow .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#snow-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+
+	100% {
+		transform: translateY(0);
+	}
+
+}
+</h1>
+
+#circle {
+  position: absolute;
+  left: 25px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #FFF;
+  animation-play-state: inherit;
+}
+
+#circle2 {
+  position: absolute;
+  left: 25px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #000;
+  animation-name:ani;
+  animation-duration: 3s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ani {
+    0% {top: 0px;}
+  	25% {top: 200px;}
+  	75% {top: 50px}
+  	100% {top: 100px;}
+}
+
+#circle:hover {
+animation-play-state: running;
+}
